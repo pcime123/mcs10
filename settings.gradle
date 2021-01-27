@@ -1,0 +1,4 @@
+include ':jOnLib_1.0.0'
+include ':libvlc'
+include ':app'
+rootProject.name = "SeeEyesOnvif"

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SeeEyes EMS</string>
+    <string name="please_wait">Please Wait......</string>
+    <string name="not_ip">Please check IP address again.</string>
+    <string name="not_mask">Please check NetMask again.</string>
+    <string name="not_dns">Please check DNS address again.</string>
+    <string name="not_gate">Please check GateWay again.</string>
+    <string name="time_out">Network timeout occurred. Please check the connection and try again.</string>
+    <string name="searching">Searching...</string>
+
+
+    <string name="main_drawer_load">Load Image for cropping</string>
+    <string name="main_drawer_open">Open navigation drawer</string>
+    <string name="main_drawer_close">Close navigation drawer</string>
+
+    <string name="main_action_crop">CROP</string>
+    <string name="main_action_rotate">Rotate 90 degrees clockwise</string>
+    <string name="main_action_flip">Flip</string>
+    <string name="main_action_flip_horizontally">Flip horizontally</string>
+    <string name="main_action_flip_vertically">Flip vertically</string>
+    <string name="drawer_option_title">Crop View Presets</string>
+    <string name="drawer_option_oval">Circular</string>
+    <string name="drawer_option_rect">Rectangular</string>
+    <string name="drawer_option_min_max">Min/Max limits override</string>
+    <string name="drawer_option_customized_overlay">Customized Overlay</string>
+    <string name="drawer_option_scale_center">Scale Center Inside</string>
+    <string name="drawer_option_title2">Customization Toggles</string>
+    <string name="drawer_option_toggle_scale">Image Scale: %1s</string>
+    <string name="drawer_option_toggle_shape">Crop Shape: %1s</string>
+    <string name="drawer_option_toggle_guidelines">Guidelines: %1s</string>
+    <string name="drawer_option_toggle_aspect_ratio">Aspect Ratio: %1s</string>
+    <string name="drawer_option_toggle_auto_zoom">Auto zoom: %1s</string>
+    <string name="drawer_option_toggle_max_zoom">Max zoom level: %1s</string>
+    <string name="drawer_option_set_initial_crop_rect">Set initial crop rectangle</string>
+    <string name="drawer_option_reset_crop_rect">Reset crop rectangle to initial</string>
+    <string name="drawer_option_toggle_multitouch">Multitouch: %1s</string>
+    <string name="drawer_option_toggle_show_overlay">Show Overlay: %1s</string>
+    <string name="drawer_option_toggle_show_progress_bar">Show Progress Bar: %1s</string>
+    <string name="network_connection_error">NetWork Connection Error!</string>
+    <string name="dhcp_connection_error">DHCP Connection ERROR!</string>
+    <string name="reg_added">등록됨</string>
+    <string name="reg_add">등록</string>
+    <string name="wait">Wait..</string>
+    <string name="change_group_name">Change Group Name</string>
+    <string name="name">Name</string>
+
+</resources>

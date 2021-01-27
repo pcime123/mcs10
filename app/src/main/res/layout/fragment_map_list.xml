@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/back_menu_line_1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMapConfigAdd"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="add MAp Config"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnImageEdit"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_map_24_yellow"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="EDIT MAP IMAGE"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnMapConfigClose"
+
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawablePadding="0dp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Close"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

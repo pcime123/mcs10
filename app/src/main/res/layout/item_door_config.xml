@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/doorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_4"
+    android:layout_marginEnd="@dimen/dimen_4"
+    android:orientation="vertical"
+    android:paddingEnd="10dp"
+    android:paddingStart="0dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/doorModel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingTop="6dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Door Model"
+                android:textStyle="bold"
+
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/camModel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="6dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Cam Model"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/iType"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="0.1"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="IP Type"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="15sp" />-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/doorIp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingTop="6dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Door IP"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/camIp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="6dp"
+                android:gravity="center"
+                android:text="Cam IP"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/doorMac"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingTop="6dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Door Mac"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/camMac"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="6dp"
+                android:gravity="center"
+                android:text="Cam Mac"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/doorLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/doorTxtReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Register"
+                android:textColor="@color/red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/doorBtnReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_gray_ra10"
+                android:drawableStart="@drawable/ic_baseline_add_circle_24"
+                android:drawablePadding="0dp"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="등록"
+                android:textColor="@color/main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="0dp"
+        android:background="#D6D6D6" />
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+
+    <dimen name="folder_column_width">120dp</dimen>
+    <dimen name="item_margin">1dp</dimen>
+    <dimen name="item_margin_half">1dp</dimen>
+
+    <dimen name="picture_column_width">90dp</dimen>
+    <dimen name="popup_width">400dp</dimen>
+    <dimen name="popup_height">450dp</dimen>
+
+</resources>

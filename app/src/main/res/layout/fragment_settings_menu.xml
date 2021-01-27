@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:layout_width="250dp"
+            android:background="#1E64DDCA"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/bar_settings"
+                android:layout_width="250dp"
+                android:background="#3E595959"
+                android:layout_height="50dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:text="SETUP"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/settings_layout_network"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/settings_network"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:text="네트워크"
+                            android:textColor="@color/main"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="10dp">
+
+                            <Button
+                                android:id="@+id/btn_ethernet"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_explicit_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="이더넷"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_range"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_baseline_apps_24"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="영역 확인"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/settings_layout_device"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:elevation="2dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/settings_device"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:text="기기 설정"
+                            android:textColor="@color/main"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/settings_device_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical">
+
+
+                            <Button
+                                android:id="@+id/btn_account"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_account_circle_black_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="SIP 계정"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_call"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_baseline_call_settings"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="호출 설정"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_baseline_forum_24"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="장비 유형 설정"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_audio"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_volume_up_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="음량 설정"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_display"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_desktop_windows_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:visibility="gone"
+                                android:paddingEnd="10dp"
+                                android:text="디스플레이"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_datetime"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_access_time_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="날짜 및 시간"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_backup"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_backup_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:visibility="gone"
+                                android:paddingEnd="10dp"
+                                android:text="간편 복구"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_info_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="기기 정보"
+
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/settings_layout_admin"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+                        android:elevation="2dp"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/settings_admin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/nanum_bold"
+                            android:text="관리자"
+
+                            android:textColor="@color/main"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_admin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            >
+
+                            <Button
+                                android:id="@+id/btn_admin_account"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="관리자 계정 관리"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/btn_admin_setup"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/button_home"
+                                android:drawableStart="@drawable/ic_settings_20dp"
+                                android:drawablePadding="20dp"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="전광판 설정"
+                                android:textColor="@color/WhiteSmoke"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/child_settings_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+          />
+
+    </LinearLayout>
+
+</layout>

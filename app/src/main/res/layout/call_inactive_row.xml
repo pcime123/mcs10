@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.8"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/button_trans_ra10"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/button_white_ra10"
+        android:layout_margin="2dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/hiddenMac"
+            android:visibility="invisible"
+            android:text="Hidden Mac"
+            android:textColor="@color/black"
+            android:textSize="1sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="SmallSp" />
+
+        <com.sscctv.seeeyesonvif.Utils.MarqueeTextView
+            android:id="@+id/contact_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp" />
+
+        <Chronometer
+            android:id="@+id/call_timer"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:visibility="gone"
+            android:paddingEnd="20dp" />
+
+        <ImageView
+            android:padding="@dimen/dimen_4"
+            android:id="@+id/call_pause"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_baseline_phone_paused_color" />
+    </LinearLayout>
+
+
+</LinearLayout>

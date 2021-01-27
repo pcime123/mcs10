@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutAlarm"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rectangle_red"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="0dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/titleAlarm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/mapodpp"
+                    android:gravity="center"
+                    android:text="긴급 부재중 알림"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnAlarm"
+                    android:layout_width="0dp"
+                    android:layout_height="45sp"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_cyan_ra10"
+                    android:text="바로가기"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:id="@+id/declineLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rectangle_gray"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/homeTxtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mapodpp"
+                android:gravity="center"
+                android:text="2020. 11. 19. 목요일"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/homeTxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/mapodpp"
+                android:gravity="center"
+                android:text="DEMO"
+                android:textColor="@color/SkyBlue"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sleep_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25">
+
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/digitalmono"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textSize="120sp" />
+
+            <TextView
+                android:id="@+id/colon"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mapodpp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#FFFFFF"
+                android:textSize="80sp" />
+
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/digitalmono"
+
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textSize="120sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintVertical_bias="0.6"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            >
+            <Button
+                android:id="@+id/btnDevice"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/button_deepgray_ra30"
+                android:drawableTop="@drawable/icon_btn_call"
+                android:drawablePadding="20dp"
+                android:paddingStart="30dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="30dp"
+                android:text="EMERGENCY"
+                android:textColor="@color/White_EA"
+                android:textSize="18sp"
+                />
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/dimen_48"
+                android:background="@drawable/button_deepgray_ra30"
+                android:drawableTop="@drawable/icon_normal_call"
+                android:drawablePadding="20dp"
+                android:paddingStart="30dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="30dp"
+                android:text="Call"
+                android:textColor="@color/White_EA"
+                android:textSize="18sp"
+                />
+
+            <Button
+                android:id="@+id/btnEmap"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/dimen_48"
+                android:background="@drawable/button_deepgray_ra30"
+                android:drawableTop="@drawable/icon_btn_emap"
+                android:drawablePadding="20dp"
+                android:paddingStart="70dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="70dp"
+                android:paddingBottom="30dp"
+                android:text="E-MAP"
+                android:textColor="@color/White_EA"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="384dp"
+            android:background="@drawable/button_deepgray_ra30"
+            android:drawableTop="@drawable/icon_btn_patrol"
+            android:drawablePadding="20dp"
+            android:paddingStart="65dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="65dp"
+            android:paddingBottom="30dp"
+            android:text="Patrol"
+            android:textColor="@color/White_EA"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.554" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/button_deepgray_ra30"
+            android:drawableTop="@drawable/icon_btn_setup"
+            android:drawablePadding="20dp"
+            android:paddingStart="70dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="70dp"
+            android:paddingBottom="30dp"
+            android:text="Setup"
+            android:textColor="@color/White_EA"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.541" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/btnCallLog"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:background="@drawable/button_blueblack_ra15"
+                android:drawableTop="@drawable/icon_list"
+                android:drawablePadding="00dp"
+                android:paddingStart="00dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="00dp"
+                android:paddingBottom="10dp"
+                android:text="LOG"
+                android:textColor="@color/White_EA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.541" />
+
+
+            <Button
+                android:id="@+id/btnPatrol"
+
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:background="@drawable/button_blueblack_ra15"
+                android:drawableTop="@drawable/icon_patrol"
+                android:drawablePadding="00dp"
+                android:paddingStart="00dp"
+                android:paddingTop="20dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:paddingEnd="00dp"
+                android:paddingBottom="10dp"
+                android:text="PATROL"
+                android:textColor="@color/White_EA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.541" />
+
+            <Button
+                android:id="@+id/btn_setup"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:background="@drawable/button_blueblack_ra15"
+                android:drawableTop="@drawable/icon_setup"
+                android:drawablePadding="00dp"
+                android:paddingStart="00dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="00dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:paddingBottom="10dp"
+                android:text="SETUP"
+                android:textColor="@color/White_EA"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.541" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

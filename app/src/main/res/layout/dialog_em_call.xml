@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_dev_search"
+        android:orientation="horizontal"
+        android:background="#E6E6E6"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Device Information"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#E6E6E6"
+            app:layout_constraintStart_toEndOf="@id/layout_device_list">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnEmSearch"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_gray"
+                    android:drawableStart="@drawable/ic_baseline_search_24"
+                    android:drawablePadding="20dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Search"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#AA4F00"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnDeviceClear"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_gray"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Clear"
+                    android:textColor="#134AD5"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:text="Model:"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtDeviceModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+
+                    android:text="MAC:"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtDeviceMac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+
+                    android:text="Version:"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtDeviceVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                android:layout_margin="8dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device configuration"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnDeviceDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_gray"
+                    android:gravity="center"
+                    android:text="PING"
+                    android:textColor="@color/main"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="IP:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDeviceIp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:maxLength="16"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="Mask:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDeviceMask"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    android:maxLength="16"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="GateWay:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDeviceGateway"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    android:maxLength="16"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="ID:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDeviceId"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    android:maxLength="16"
+                    android:imeOptions="actionNext"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="PassWord:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDevicePass"
+
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+
+                    android:maxLength="16"
+                    android:imeOptions="actionNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:padding="8dp"
+                    android:text="Location:"
+
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editDeviceLoc"
+
+                    android:layout_marginEnd="16dp"
+                    android:singleLine="true"
+                    android:maxLength="16"
+                    android:textSize="16sp"
+
+                    android:imeOptions="actionDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnDeviceAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_gray"
+                android:drawableStart="@drawable/ic_baseline_add_circle_24"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Add"
+                android:textColor="@color/main"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnDeviceClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_gray"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Close"
+                android:textColor="#A60303"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

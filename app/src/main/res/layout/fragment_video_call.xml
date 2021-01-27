@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/svFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/svVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/endCallLayout"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rectangle_gray"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/endCallTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종료중 입니다..."
+                android:paddingStart="@dimen/dimen_48"
+                android:paddingEnd="@dimen/dimen_48"
+                android:paddingTop="@dimen/dimen_16"
+                android:paddingBottom="@dimen/dimen_16"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05">
+
+            <TextView
+                android:id="@+id/txtCallModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SC-ECS30CMDCS"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtCallLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="설치 위치"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Chronometer
+                android:id="@+id/timer_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/barButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95">
+
+            <ImageButton
+                android:id="@+id/btnCallSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/rectangle_call_btn_gray"
+                android:padding="25dp"
+                android:src="@drawable/ic_baseline_volume_up_24" />
+
+            <ImageButton
+                android:id="@+id/btnVolumeSet"
+
+                android:layout_width="80dp"
+
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/rectangle_call_btn_gray"
+                android:padding="25dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_volume_off" />
+
+            <ImageButton
+                android:id="@+id/btnMicOff"
+                android:layout_width="80dp"
+
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/rectangle_call_btn_gray"
+                android:padding="25dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_mic_on" />
+
+
+            <ImageButton
+                android:id="@+id/btnCallEnd"
+                android:layout_width="260dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="180dp"
+                android:background="@drawable/rectangle_call_btn_red"
+                android:padding="25dp"
+                android:src="@drawable/ic_baseline_call_end_24" />
+
+            <ImageButton
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginStart="370dp"
+                android:background="@drawable/rectangle_call_btn_gray"
+                android:padding="25dp"
+                android:src="@drawable/ic_baseline_menu_24" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutVolume"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/barButton"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/txtVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="음량"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_call_btn_gray"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/barRingVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="0.7"
+                    android:padding="4dp"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/barSpeakerVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="0.7"
+                    android:padding="4dp"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/barHeadsetVolume"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="0.7"
+                    android:padding="4dp"
+                    android:progressDrawable="@drawable/seekbar_background"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnDoorOpen"
+                android:padding="20dp"
+                android:background="@drawable/rectangle_call_btn_orange"
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/icon_door_open" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/waitList"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

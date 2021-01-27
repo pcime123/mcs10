@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_dev_search"
+        android:layout_width="1100dp"
+        android:layout_height="wrap_content"
+        android:background="#E6E6E6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_4">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dimen_4"
+                    android:paddingEnd="@dimen/dimen_4"
+                    android:paddingBottom="@dimen/dimen_4">
+
+
+                    <Button
+                        android:id="@+id/btnDoorSearch"
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_deepgray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_search_24"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Door bell SEARCH"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnDoorClose"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:layout_weight="0.15"
+                        android:background="@drawable/button_deepgray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_close_24"
+                        android:drawablePadding="20dp"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Close"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="@dimen/dimen_8"
+            android:background="#BFBFBF" />
+
+        <LinearLayout
+            android:id="@+id/layout_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/btnDoorSortModel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="Model"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+
+                <Button
+                    android:id="@+id/btnDoorSortIp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="IP Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDoorSortMac"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="MAC Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDoorSortLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Register"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listDoor"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/White_1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_4">
+
+
+
+            <Button
+                android:id="@+id/btnDoorChange"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layout_weight="0.2"
+                android:background="@drawable/button_gray_ra10"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Door \nIP CHANGE"
+                android:textColor="@color/DodgerBlue"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/btnDoorDefault"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layout_weight="0.2"
+                android:background="@drawable/button_gray_ra10"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Door\nFactory Default"
+                android:textColor="@color/DodgerBlue"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnDoorCamAct"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layout_weight="0.2"
+                android:background="@drawable/button_gray_ra10"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="DOOR CAM\nACTIVATION"
+                android:textColor="@color/DarkMagenta"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnDoorCamChange"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layout_weight="0.2"
+                android:background="@drawable/button_gray_ra10"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Door Cam\nIP CHANGE"
+                android:textColor="@color/DarkMagenta"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnCamDefault"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/button_gray_ra10"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Door Cam\nFactory Default"
+                android:textColor="@color/DarkMagenta"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

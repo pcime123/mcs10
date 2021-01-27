@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#34AFAFAF"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/title_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="All IMAGE"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/btnRotate"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@android:drawable/ic_menu_rotate"
+                android:drawablePadding="0dp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:visibility="gone"
+                android:text="Rotate"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnHorizonFlip"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_flip_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:visibility="gone"
+
+                android:text="Horizontal Flip"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnVerticalFlip"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_flip_val_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:visibility="gone"
+
+                android:text="Vertical Flip"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+
+
+            <Button
+                android:id="@+id/btnSetup"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_settings_applications_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="SETUP"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnCrop"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_crop_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Crop"
+                android:textColor="@color/Beige"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_save_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_home"
+                android:drawableStart="@drawable/ic_baseline_close_24"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Close"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/imagePager"
+            android:layout_width="match_parent"
+            android:layout_below="@id/title_bar"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <!--android:scaleType="centerCrop"-->
+
+        <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_marginTop="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/indicatorRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ScrollView
+        android:id="@+id/navigation_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_gravity="end"
+        android:background="#303030"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="#303030"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/drawer_option_load"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/main_drawer_load"/>
+
+            <View style="@style/Cropper.Widget.Drawer.Seperator"/>
+
+            <TextView
+                style="@style/Cropper.Widget.Drawer.Title.TextView"
+                android:text="@string/drawer_option_title"/>
+
+            <TextView
+                android:id="@+id/drawer_option_oval"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_oval"/>
+
+            <TextView
+                android:id="@+id/drawer_option_rect"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_rect"/>
+
+            <TextView
+                android:id="@+id/drawer_option_customized_overlay"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_customized_overlay"/>
+
+            <TextView
+                android:id="@+id/drawer_option_min_max_override"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_min_max"/>
+
+            <TextView
+                android:id="@+id/drawer_option_scale_center"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_scale_center"/>
+
+            <View style="@style/Cropper.Widget.Drawer.Seperator"/>
+
+            <TextView
+                style="@style/Cropper.Widget.Drawer.Title.TextView"
+                android:text="@string/drawer_option_title2"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_scale"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_scale"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_shape"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_shape"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_guidelines"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_guidelines"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_aspect_ratio"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_aspect_ratio"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_auto_zoom"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_auto_zoom"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_max_zoom"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_max_zoom"/>
+
+            <TextView
+                android:id="@+id/drawer_option_set_initial_crop_rect"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_set_initial_crop_rect"/>
+
+            <TextView
+                android:id="@+id/drawer_option_reset_crop_rect"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_reset_crop_rect"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_multitouch"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_multitouch"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_show_overlay"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_show_overlay"/>
+
+            <TextView
+                android:id="@+id/drawer_option_toggle_show_progress_bar"
+                style="@style/Cropper.Widget.Drawer.Option.TextView"
+                android:onClick="onDrawerOptionClicked"
+                android:text="@string/drawer_option_toggle_show_progress_bar"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

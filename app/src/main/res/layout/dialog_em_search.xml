@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_dev_search"
+        android:layout_width="1100dp"
+        android:layout_height="wrap_content"
+        android:background="#E6E6E6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_4">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#E6E6E6"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_4"
+                    app:layout_constraintStart_toEndOf="@id/layout_device_list">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Model"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/txtDeviceModel"
+                            android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="MAC"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/txtDeviceMac"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="Version"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtDeviceVersion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:text="HTTP"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtDeviceHttp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:gravity="center"
+                                android:text="HTTPS"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtDeviceHttps"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:background="#E6E6E6"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dimen_4"
+                    android:paddingTop="@dimen/dimen_4"
+                    android:paddingEnd="@dimen/dimen_4"
+                    app:layout_constraintStart_toEndOf="@id/layout_device_list">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDeviceIp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDeviceIp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_8"
+                            android:layout_marginEnd="@dimen/dimen_8"
+                            android:layout_marginBottom="7dp"
+                            android:digits="0123456789."
+                            android:gravity="center"
+                            android:hint="IP Address"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:letterSpacing="0.15"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDeviceMask"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDeviceMask"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_8"
+                            android:layout_marginEnd="@dimen/dimen_8"
+                            android:layout_marginBottom="7dp"
+                            android:digits="0123456789."
+                            android:gravity="center"
+
+                            android:hint="Subnet Mask"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:letterSpacing="0.15"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDeviceGateWay"
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDeviceGateWay"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_8"
+                            android:layout_marginEnd="@dimen/dimen_8"
+                            android:layout_marginBottom="7dp"
+                            android:digits="0123456789."
+                            android:gravity="center"
+                            android:hint="GateWay"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|numberDecimal"
+                            android:letterSpacing="0.15"
+                            android:padding="8dp"
+                            android:singleLine="true"
+
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/layoutDeviceLoc"-->
+
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="match_parent"-->
+                    <!--                        android:layout_weight="0.3">-->
+
+                    <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                    <!--                            android:id="@+id/editDeviceLoc"-->
+
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:layout_marginBottom="7dp"-->
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:hint="Location (Input)"-->
+                    <!--                            android:padding="8dp"-->
+                    <!--                            android:layout_marginStart="16dp"-->
+                    <!--                            android:imeOptions="actionDone"-->
+
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="16sp" />-->
+
+
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dimen_4"
+                    android:paddingEnd="@dimen/dimen_4"
+                    android:paddingBottom="@dimen/dimen_4">
+
+
+                    <Button
+                        android:id="@+id/btnEmSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_gray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_search_24"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="SEARCH"
+                        android:textColor="@color/Chocolate"
+                        android:textSize="15sp" />
+
+
+                    <Button
+                        android:id="@+id/btnDeviceChange"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_gray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_add_circle_24"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="IP CHANGE"
+                        android:textColor="@color/main"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnDeviceActivation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_gray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_add_circle_24"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Activation"
+                        android:textColor="@color/main"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnDeviceDefault"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/button_gray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_add_circle_24"
+                        android:drawablePadding="20dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Factory Default"
+                        android:textColor="@color/main"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btnDeviceClose"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dimen_16"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:layout_marginBottom="@dimen/dimen_8"
+                        android:layout_weight="0.15"
+                        android:background="@drawable/button_gray_ra10"
+                        android:drawableStart="@drawable/ic_baseline_close_24"
+                        android:drawablePadding="20dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Close"
+                        android:textColor="#A60303"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_margin="@dimen/dimen_8"
+            android:background="#BFBFBF" />
+
+        <LinearLayout
+            android:id="@+id/layout_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/btnDeviceSortModel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="Model"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDeviceSortType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="IP Type"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDeviceSortIp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="IP Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDeviceSortMac"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="MAC Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnDeviceSortLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                    android:padding="8dp"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Register"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listDevice"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/White_1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

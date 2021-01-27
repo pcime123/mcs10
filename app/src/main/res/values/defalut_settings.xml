@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="first_call_mode">false</bool>
+    <bool name="first_speaker_button">false</bool>
+    <bool name="first_hook_button">false</bool>
+    <bool name="first_bed_frag">false</bool>
+    <bool name="first_sip_settings">false</bool>
+
+    <integer name="default_log_size">100</integer>
+    <integer name="max_log_size">100</integer>
+    <bool name="missed_call_mode">false</bool>
+
+
+    <string name="first_multicast_ip">239.21.218.198</string>
+    <string name="first_multicast_port">1235</string>
+    <string name="first_tcp_port">59009</string>
+
+    <bool name="screen_touch_lock">false</bool>
+
+    <bool name="audio_front_bypass">false</bool>
+    <integer name="audio_front_speaker_gain">3</integer>
+    <integer name="audio_front_mic_gain">5</integer>
+
+    <integer name="default_headset_volume">16</integer>
+    <integer name="default_speaker_volume">16</integer>
+    <integer name="default_ring_volume">4</integer>
+
+    <string name="default_login_id">ems_private</string>
+    <string name="default_login_pass">S~e~e~E!y!e!s</string>
+
+    <integer name="default_span_count">3</integer>
+    <string name="default_call_timeout">60</string>
+    <string name="default_dev_name">None</string>
+
+    <bool name="default_discovery_act">true</bool>
+
+
+    <string name="none">None</string>
+    </resources>

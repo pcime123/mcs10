@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="model">
+        <item>ECS30CW</item>
+        <item>ECS30NW</item>
+        <item>ECS30CWP</item>
+        <item>ECS20</item>
+        <item>NCS02</item>
+    </string-array>
+    
+    <string-array name="span_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
